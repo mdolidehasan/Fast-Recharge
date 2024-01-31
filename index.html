@@ -1,11 +1,358 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fast Recharge</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fast Recharge</title>
+  <!-- Tailwind and DaisyUI -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Manrope google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:wght@400;500;700;800&display=swap"
+    rel="stylesheet">
+  <!-- Tailwind Custom Color -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            'mobile-primary': '#2563eb',
+            'mobile-secondary': '#1d4ed8',
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Fonts awesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"      />
+  <!--Font style  -->
+  <style>
+    .font-manrope {
+      font-family: 'Manrope', sans-serif;
+    }
+  </style>
+
 </head>
+
 <body>
-    
+  <header class="p-8">
+    <div class="flex justify-around bg-mobile-primary p-2">
+      <div>
+        <img class="w-[5%] relative left-10" src="illust58-811.jpg" alt="">
+        <h3 class="text-xl text-amber-400"><a href="index.html">Fast Recharge</a></h3>
+      </div>
+      <div>
+        <i class="fa-solid fa-headphones"><a class="text-yellow-400 m-2" href="">24/7 SUPPORT SESSION</a></i>
+      </div>
+      <div class="mx-4 text-green-400 border p-4 rounded-lg">
+        <a href="login.html">login</a>
+      </div>
+    </div>
+    <section class="mt-4">
+      <div class="flex justify-evenly">
+        <button class="bg-green-200 text-green-950">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+          </svg>
+          <span class="btm-nav-label">Home</span>
+        </button>
+        <button class="active bg-red-200 text-red-600 border-blue-600">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span class="btm-nav-label">Warnings</span>
+        </button>
+        <button class="bg-blue-200 text-blue-600">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          </svg>
+          <span class="btm-nav-label">Statics</span>
+        </button>
+      </div>
+    </section>
+    <!-- Heading Section -->
+    <section class="mt-10">
+      <div class="flex justify-around">
+        <div class="hover:bg-blue-500 hover:text-white mb-4"><img src="recharge.svg" alt="">Recharge</div>
+        <div class="hover:bg-blue-500 hover:text-white"><img src="bill-hover.svg" alt="">Bill</div>
+        <div class="hover:bg-blue-500 hover:text-white"><img src="subscriptions.svg" alt="">Subscription</div>
+      </div>
+      <div>
+        <div class="flex flex-col w-full border-opacity-50">
+          <div class="grid h-10 card bg-blue-600 place-items-center"><span
+              class="bg-blue-800 text-white p-2">Top-Up</span></div>
+        </div>
+      </div>
+    </section>
+  </header>
+  <main class="px-8">
+    <!--Recharge Section  -->
+    <section class="">
+      <div>
+        <h3 class="text-xl text-gray-950">Recharge</h3>
+        <p class="text-sm text-gray-600 mb-6">Recharge your mobile. Anytime. Anywhere!</p>
+      </div>
+      <div>
+        <input type="number" placeholder="PhoneNumber" class="input input-bordered input-primary w-[24%] max-w-xs" />
+        <select class="select select-primary w-[24%] max-w-xs">
+          <option disabled selected>Select Operator</option>
+          <option>GP</option>
+          <option>Robi</option>
+          <option>BanglaLink</option>
+          <option>Teletalk</option>
+          <option>Airtel</option>
+        </select>
+        <select class="select select-primary w-[24%] max-w-xs">
+          <option disabled selected>Select connection type</option>
+          <option>prepaid</option>
+          <option>postpaid</option>
+        </select>
+        <input type="number" placeholder="Enter amount" class="input input-bordered input-info w-[24%] max-w-xs" />
+      </div>
+    </section>
+    <!-- Most Popular Offers Section -->
+    <section class="mt-10 bg-lime-500 p-4">
+      <div>
+        <h3 class="text-xl text-white font-bold mb-2">Most Popular Offers</h3>
+      </div>
+      <div class="flex gap-2">
+        <div class="card card-side bg-base-100 shadow-xl">
+          <figure><img src="WhatsApp Image 2024-01-28 at 23.43.42_65799a8b.jpg" alt="Movie" /></figure>
+          <div class="card-body">
+            <h2 class="card-title">Anynet 18 min, 24Hrs</h2>
+            <p>24 Hour</p>
+            <div class="card-actions">
+              <button class="btn btn-primary justify-end">14 Tk.</button>
+            </div>
+          </div>
+        </div>
+        <div class="card card-side bg-base-100 shadow-xl">
+          <figure><img src="WhatsApp Image 2024-01-28 at 23.43.42_272b3ed4.jpg" alt="Movie" /></figure>
+          <div class="card-body">
+            <h2 class="card-title">53 Mins, 3 Days</h2>
+            <p>3 Days</p>
+            <div class="card-actions">
+              <button class="btn btn-primary">32 Tk.</button>
+            </div>
+          </div>
+        </div>
+        <div class="card card-side bg-base-100 shadow-xl">
+          <figure><img src="WhatsApp Image 2024-01-28 at 23.43.42_ed77f6c4.jpg" alt="Movie" /></figure>
+          <div class="card-body">
+            <h2 class="card-title">80Paisa/Minutes, 2 Days</h2>
+            <p>2 Day</p>
+            <div class="card-actions">
+              <button class="btn btn-primary">26Tk.</button>
+            </div>
+          </div>
+        </div>
+        <div class="card card-side bg-base-100 shadow-xl">
+          <figure><img src="WhatsApp Image 2024-01-28 at 23.43.44_885774ea.jpg" alt="Movie" /></figure>
+          <div class="card-body">
+            <h2 class="card-title">25 Min, 24 Hour</h2>
+            <p>24Hour</p>
+            <div class="card-actions">
+              <button class="btn btn-primary">19 Tk.</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Recharge Offers Section -->
+    <section class="mt-10 bg-blue-500 shadow-xl p-4">
+      <div>
+        <div>
+          <h3 class="text-xl text-white font-bold">Recharge Offers</h3>
+        </div>
+      </div>
+      <div class="flex gap-2 m-2">
+        <div class="card card-side bg-base-100 shadow-xl">
+          <figure><img src="WhatsApp Image 2024-01-28 at 23.43.42_ed77f6c4.jpg" alt="Movie" /></figure>
+          <div class="card-body">
+            <h2 class="card-title">80Paisa/Minutes, 2 Days</h2>
+            <p>2 Day</p>
+            <div class="card-actions">
+              <button class="btn btn-primary">26Tk.</button>
+            </div>
+          </div>
+        </div>
+        <div class="card card-side bg-base-100 shadow-xl">
+          <figure><img src="WhatsApp Image 2024-01-28 at 23.43.42_ed77f6c4.jpg" alt="Movie" /></figure>
+          <div class="card-body">
+            <h2 class="card-title">80Paisa/Minutes, 2 Days</h2>
+            <p>2 Day</p>
+            <div class="card-actions">
+              <button class="btn btn-primary">26Tk.</button>
+            </div>
+          </div>
+        </div>
+        <div class="card card-side bg-base-100 shadow-xl">
+          <figure><img src="WhatsApp Image 2024-01-28 at 23.43.42_ed77f6c4.jpg" alt="Movie" /></figure>
+          <div class="card-body">
+            <h2 class="card-title">80Paisa/Minutes, 2 Days</h2>
+            <p>2 Day</p>
+            <div class="card-actions">
+              <button class="btn btn-primary">26Tk.</button>
+            </div>
+          </div>
+        </div>
+        <div class="card card-side bg-base-100 shadow-xl">
+          <figure><img src="WhatsApp Image 2024-01-28 at 23.43.42_ed77f6c4.jpg" alt="Movie" /></figure>
+          <div class="card-body">
+            <h2 class="card-title">80Paisa/Minutes, 2 Days</h2>
+            <p>2 Day</p>
+            <div class="card-actions">
+              <button class="btn btn-primary">26Tk.</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex gap-2 m-2">
+        <div class="card card-side bg-base-100 shadow-xl">
+          <figure><img src="WhatsApp Image 2024-01-28 at 23.43.42_ed77f6c4.jpg" alt="Movie" /></figure>
+          <div class="card-body">
+            <h2 class="card-title">80Paisa/Minutes, 2 Days</h2>
+            <p>2 Day</p>
+            <div class="card-actions">
+              <button class="btn btn-primary">26Tk.</button>
+            </div>
+          </div>
+        </div>
+        <div class="card card-side bg-base-100 shadow-xl">
+          <figure><img src="WhatsApp Image 2024-01-28 at 23.43.42_ed77f6c4.jpg" alt="Movie" /></figure>
+          <div class="card-body">
+            <h2 class="card-title">80Paisa/Minutes, 2 Days</h2>
+            <p>2 Day</p>
+            <div class="card-actions">
+              <button class="btn btn-primary">26Tk.</button>
+            </div>
+          </div>
+        </div>
+        <div class="card card-side bg-base-100 shadow-xl">
+          <figure><img src="WhatsApp Image 2024-01-28 at 23.43.42_ed77f6c4.jpg" alt="Movie" /></figure>
+          <div class="card-body">
+            <h2 class="card-title">80Paisa/Minutes, 2 Days</h2>
+            <p>2 Day</p>
+            <div class="card-actions">
+              <button class="btn btn-primary">26Tk.</button>
+            </div>
+          </div>
+        </div>
+        <div class="card card-side bg-base-100 shadow-xl">
+          <figure><img src="WhatsApp Image 2024-01-28 at 23.43.42_ed77f6c4.jpg" alt="Movie" /></figure>
+          <div class="card-body">
+            <h2 class="card-title">80Paisa/Minutes, 2 Days</h2>
+            <p>2 Day</p>
+            <div class="card-actions">
+              <button class="btn btn-primary">26Tk.</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex gap-2 m-2">
+        <div class="card card-side bg-base-100 shadow-xl">
+          <figure><img src="WhatsApp Image 2024-01-28 at 23.43.42_ed77f6c4.jpg" alt="Movie" /></figure>
+          <div class="card-body">
+            <h2 class="card-title">80Paisa/Minutes, 2 Days</h2>
+            <p>2 Day</p>
+            <div class="card-actions">
+              <button class="btn btn-primary">26Tk.</button>
+            </div>
+          </div>
+        </div>
+        <div class="card card-side bg-base-100 shadow-xl">
+          <figure><img src="WhatsApp Image 2024-01-28 at 23.43.42_ed77f6c4.jpg" alt="Movie" /></figure>
+          <div class="card-body">
+            <h2 class="card-title">80Paisa/Minutes, 2 Days</h2>
+            <p>2 Day</p>
+            <div class="card-actions">
+              <button class="btn btn-primary">26Tk.</button>
+            </div>
+          </div>
+        </div>
+        <div class="card card-side bg-base-100 shadow-xl">
+          <figure><img src="WhatsApp Image 2024-01-28 at 23.43.42_ed77f6c4.jpg" alt="Movie" /></figure>
+          <div class="card-body">
+            <h2 class="card-title">80Paisa/Minutes, 2 Days</h2>
+            <p>2 Day</p>
+            <div class="card-actions">
+              <button class="btn btn-primary">26Tk.</button>
+            </div>
+          </div>
+        </div>
+        <div class="card card-side bg-base-100 shadow-xl">
+          <figure><img src="WhatsApp Image 2024-01-28 at 23.43.42_ed77f6c4.jpg" alt="Movie" /></figure>
+          <div class="card-body">
+            <h2 class="card-title">80Paisa/Minutes, 2 Days</h2>
+            <p>2 Day</p>
+            <div class="card-actions">
+              <button class="btn btn-primary">26Tk.</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="join mt-4 flex justify-end">
+        <button class="join-item btn btn-active">1</button>
+        <button class="join-item btn">2</button>
+        <button class="join-item btn">3</button>
+        <button class="join-item btn">4</button>
+      </div>
+    </section>
+    <!-- Pay With Section -->
+    <section>
+
+    </section>
+  </main>
+  <footer class="footer p-10 bg-gray-900 text-stone-50 mt-10">
+    <aside class="mx-auto text-center">
+      <p class="text-stone-50 text-3xl mx-auto lg:mx-0">Get In Touch</p>
+      <p class="text-stone-50 text-xs mb-2">Connect with us and let's make things happen. Get in touch <br>for
+        inquiries, collaboration, or to explore how we can assist <br>you.</p>
+      <div class="flex gap-2 mx-auto lg:mx-0">
+        <img src="Frame (1).png" alt="">
+        <h6 class="text-base">fastrecharge1@support.com</h6>
+      </div>
+      <div class="flex gap-2 mb-2 mx-auto lg:mx-0">
+        <img src="Frame (2).png" alt="">
+        <h6 class="text-base">(+62) 123-321-543</h6>
+      </div>
+    </aside>
+    <div class="flex mx-auto gap-8">
+      <div class="flex flex-col">
+        <header class="footer-title">Services</header>
+        <a href="https://www.grameenphone.com/" class="link link-hover mb-2">GP</a>
+        <a href="https://robi.com.bd/en" class="link link-hover mb-2">Robi</a>
+        <a href="https://www.banglalink.net/en" class="link link-hover mb-2">BanglaLink</a>
+        <a href="https://www.teletalk.com.bd/bn/" class="link link-hover mb-2">Teletalk</a>
+        <a href="https://www.bd.airtel.com/en" class="link link-hover mb-2">Airtel</a>
+      </div>
+      <div class="flex flex-col">
+        <header class="footer-title">Support</header>
+        <a class="link link-hover mb-2">Help Center</a>
+        <a class="link link-hover mb-2">FAQ</a>
+        <a class="link link-hover mb-2">Operators</a>
+        <a class="link link-hover mb-2">Contact Us</a>
+      </div>
+    </div>
+    <div class="flex flex-col">
+      <header class="footer-title">Company</header>
+      <a class="link link-hover mb-2">About us</a>
+      <a class="link link-hover mb-2">Leadership</a>
+      <a class="link link-hover mb-2">Carrers</a>
+      <a class="link link-hover mb-2">News & Article</a>
+      <a class="link link-hover mb-2">Legal Notice</a>
+    </div>
+  </footer>
 </body>
+
 </html>
