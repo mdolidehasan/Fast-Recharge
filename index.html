@@ -103,8 +103,11 @@
         <p class="text-sm text-gray-600 mb-6">Recharge your mobile. Anytime. Anywhere!</p>
       </div>
       <div>
-        <input type="number" placeholder="PhoneNumber" class="input input-bordered input-primary w-[24%] max-w-xs" />
-        <select class="select select-primary w-[24%] max-w-xs">
+
+        <input type="number" id="phone_number" placeholder="PhoneNumber"
+          class="input input-bordered input-primary w-[24%] max-w-xs" />
+        <span id="para"></span>
+        <select title="operators" id="operators" required class="select select-primary w-[24%] max-w-xs">
           <option disabled selected>Select Operator</option>
           <option>GP</option>
           <option>Robi</option>
@@ -112,12 +115,16 @@
           <option>Teletalk</option>
           <option>Airtel</option>
         </select>
-        <select class="select select-primary w-[24%] max-w-xs">
+        <select title="payment-method" id="payment-method" class="select select-primary w-[24%] max-w-xs">
           <option disabled selected>Select connection type</option>
           <option>prepaid</option>
           <option>postpaid</option>
         </select>
-        <input type="number" placeholder="Enter amount" class="input input-bordered input-info w-[24%] max-w-xs" />
+        <input type="number" id="amount" placeholder="Enter amount"
+          class="input input-bordered input-info w-[24%] max-w-xs" />
+        <button onclick="submit()" disabled id="btn" class="btn btn-secondary font-bold mt-6"><a href="pay.html">Proceed to
+          payment</a></button>
+
       </div>
     </section>
     <!-- Most Popular Offers Section -->
@@ -127,42 +134,47 @@
       </div>
       <div class="flex gap-2">
         <div class="card card-side bg-base-100 shadow-xl">
+          <span class="indicator-item bg-orange-600 badge badge-primary p-5">hot deal</span>
           <figure><img src="WhatsApp Image 2024-01-28 at 23.43.42_65799a8b.jpg" alt="Movie" /></figure>
           <div class="card-body">
             <h2 class="card-title">Anynet 18 min, 24Hrs</h2>
             <p>24 Hour</p>
             <div class="card-actions">
-              <button class="btn btn-primary justify-end">14 Tk.</button>
+              <button onclick="valueBtn()" class="btn btn-primary justify-end"> <span
+                  id="valueBtn">14</span>Tk.</button>
             </div>
           </div>
         </div>
         <div class="card card-side bg-base-100 shadow-xl">
+          <span class="indicator-item bg-orange-600 badge badge-primary p-5">hot deal</span>
           <figure><img src="WhatsApp Image 2024-01-28 at 23.43.42_272b3ed4.jpg" alt="Movie" /></figure>
           <div class="card-body">
             <h2 class="card-title">53 Mins, 3 Days</h2>
             <p>3 Days</p>
             <div class="card-actions">
-              <button class="btn btn-primary">32 Tk.</button>
+              <button onclick="valueBtn1()" class="btn btn-primary"><span id="valueBtn1">32</span> Tk.</button>
             </div>
           </div>
         </div>
         <div class="card card-side bg-base-100 shadow-xl">
+          <span class="indicator-item bg-orange-600 badge badge-primary p-5">hot deal</span>
           <figure><img src="WhatsApp Image 2024-01-28 at 23.43.42_ed77f6c4.jpg" alt="Movie" /></figure>
           <div class="card-body">
             <h2 class="card-title">80Paisa/Minutes, 2 Days</h2>
             <p>2 Day</p>
             <div class="card-actions">
-              <button class="btn btn-primary">26Tk.</button>
+              <button onclick="valueBtn3()" class="btn btn-primary"><span id="valueBtn3">26</span> Tk.</button>
             </div>
           </div>
         </div>
         <div class="card card-side bg-base-100 shadow-xl">
+          <span class="indicator-item bg-orange-600 badge badge-primary p-5">hot deal</span>
           <figure><img src="WhatsApp Image 2024-01-28 at 23.43.44_885774ea.jpg" alt="Movie" /></figure>
           <div class="card-body">
             <h2 class="card-title">25 Min, 24 Hour</h2>
             <p>24Hour</p>
             <div class="card-actions">
-              <button class="btn btn-primary">19 Tk.</button>
+              <button onclick="valueBtn2()" class="btn btn-primary"><span id="valueBtn2">19</span> Tk.</button>
             </div>
           </div>
         </div>
@@ -187,7 +199,7 @@
           </div>
         </div>
         <div class="card card-side bg-base-100 shadow-xl">
-          <figure><img src="WhatsApp Image 2024-01-28 at 23.43.42_ed77f6c4.jpg" alt="Movie" /></figure>
+          <figure><img src="WhatsApp Image 2024-01-28 at 23.43.42_272b3ed4.jpg" alt="Movie" /></figure>
           <div class="card-body">
             <h2 class="card-title">80Paisa/Minutes, 2 Days</h2>
             <p>2 Day</p>
@@ -197,7 +209,7 @@
           </div>
         </div>
         <div class="card card-side bg-base-100 shadow-xl">
-          <figure><img src="WhatsApp Image 2024-01-28 at 23.43.42_ed77f6c4.jpg" alt="Movie" /></figure>
+          <figure><img src="WhatsApp Image 2024-01-28 at 23.43.44_885774ea.jpg" alt="Movie" /></figure>
           <div class="card-body">
             <h2 class="card-title">80Paisa/Minutes, 2 Days</h2>
             <p>2 Day</p>
@@ -207,49 +219,7 @@
           </div>
         </div>
         <div class="card card-side bg-base-100 shadow-xl">
-          <figure><img src="WhatsApp Image 2024-01-28 at 23.43.42_ed77f6c4.jpg" alt="Movie" /></figure>
-          <div class="card-body">
-            <h2 class="card-title">80Paisa/Minutes, 2 Days</h2>
-            <p>2 Day</p>
-            <div class="card-actions">
-              <button class="btn btn-primary">26Tk.</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="flex gap-2 m-2">
-        <div class="card card-side bg-base-100 shadow-xl">
-          <figure><img src="WhatsApp Image 2024-01-28 at 23.43.42_ed77f6c4.jpg" alt="Movie" /></figure>
-          <div class="card-body">
-            <h2 class="card-title">80Paisa/Minutes, 2 Days</h2>
-            <p>2 Day</p>
-            <div class="card-actions">
-              <button class="btn btn-primary">26Tk.</button>
-            </div>
-          </div>
-        </div>
-        <div class="card card-side bg-base-100 shadow-xl">
-          <figure><img src="WhatsApp Image 2024-01-28 at 23.43.42_ed77f6c4.jpg" alt="Movie" /></figure>
-          <div class="card-body">
-            <h2 class="card-title">80Paisa/Minutes, 2 Days</h2>
-            <p>2 Day</p>
-            <div class="card-actions">
-              <button class="btn btn-primary">26Tk.</button>
-            </div>
-          </div>
-        </div>
-        <div class="card card-side bg-base-100 shadow-xl">
-          <figure><img src="WhatsApp Image 2024-01-28 at 23.43.42_ed77f6c4.jpg" alt="Movie" /></figure>
-          <div class="card-body">
-            <h2 class="card-title">80Paisa/Minutes, 2 Days</h2>
-            <p>2 Day</p>
-            <div class="card-actions">
-              <button class="btn btn-primary">26Tk.</button>
-            </div>
-          </div>
-        </div>
-        <div class="card card-side bg-base-100 shadow-xl">
-          <figure><img src="WhatsApp Image 2024-01-28 at 23.43.42_ed77f6c4.jpg" alt="Movie" /></figure>
+          <figure><img src="WhatsApp Image 2024-01-28 at 23.43.42_272b3ed4.jpg" alt="Movie" /></figure>
           <div class="card-body">
             <h2 class="card-title">80Paisa/Minutes, 2 Days</h2>
             <p>2 Day</p>
@@ -261,7 +231,7 @@
       </div>
       <div class="flex gap-2 m-2">
         <div class="card card-side bg-base-100 shadow-xl">
-          <figure><img src="WhatsApp Image 2024-01-28 at 23.43.42_ed77f6c4.jpg" alt="Movie" /></figure>
+          <figure><img src="WhatsApp Image 2024-01-28 at 23.43.42_65799a8b.jpg" alt="Movie" /></figure>
           <div class="card-body">
             <h2 class="card-title">80Paisa/Minutes, 2 Days</h2>
             <p>2 Day</p>
@@ -281,7 +251,49 @@
           </div>
         </div>
         <div class="card card-side bg-base-100 shadow-xl">
-          <figure><img src="WhatsApp Image 2024-01-28 at 23.43.42_ed77f6c4.jpg" alt="Movie" /></figure>
+          <figure><img src="WhatsApp Image 2024-01-28 at 23.43.42_65799a8b.jpg" alt="Movie" /></figure>
+          <div class="card-body">
+            <h2 class="card-title">80Paisa/Minutes, 2 Days</h2>
+            <p>2 Day</p>
+            <div class="card-actions">
+              <button class="btn btn-primary">26Tk.</button>
+            </div>
+          </div>
+        </div>
+        <div class="card card-side bg-base-100 shadow-xl">
+          <figure><img src="WhatsApp Image 2024-01-28 at 23.43.42_65799a8b.jpg" alt="Movie" /></figure>
+          <div class="card-body">
+            <h2 class="card-title">80Paisa/Minutes, 2 Days</h2>
+            <p>2 Day</p>
+            <div class="card-actions">
+              <button class="btn btn-primary">26Tk.</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex gap-2 m-2">
+        <div class="card card-side bg-base-100 shadow-xl">
+          <figure><img src="WhatsApp Image 2024-01-28 at 23.43.42_272b3ed4.jpg" alt="Movie" /></figure>
+          <div class="card-body">
+            <h2 class="card-title">80Paisa/Minutes, 2 Days</h2>
+            <p>2 Day</p>
+            <div class="card-actions">
+              <button class="btn btn-primary">26Tk.</button>
+            </div>
+          </div>
+        </div>
+        <div class="card card-side bg-base-100 shadow-xl">
+          <figure><img src="WhatsApp Image 2024-01-28 at 23.43.44_885774ea.jpg" alt="Movie" /></figure>
+          <div class="card-body">
+            <h2 class="card-title">80Paisa/Minutes, 2 Days</h2>
+            <p>2 Day</p>
+            <div class="card-actions">
+              <button class="btn btn-primary">26Tk.</button>
+            </div>
+          </div>
+        </div>
+        <div class="card card-side bg-base-100 shadow-xl">
+          <figure><img src="WhatsApp Image 2024-01-28 at 23.43.42_272b3ed4.jpg" alt="Movie" /></figure>
           <div class="card-body">
             <h2 class="card-title">80Paisa/Minutes, 2 Days</h2>
             <p>2 Day</p>
@@ -309,13 +321,45 @@
       </div>
     </section>
     <!-- Pay With Section -->
-    <section>
-
+    <section class="mt-10">
+      <div>
+        <div>
+          <h1 class="text-5xl font-bold">Pay With</h1>
+        </div>
+        <div class="flex mt-10 justify-around">
+          <div>
+            <h3 class="text-3xl font-semibold">Mobile Banking <span class="font-bold">--></span> </h1>
+          </div>
+          <div class="flex gap-6">
+            <img src="nagad-svg.svg" alt="">
+            <img src="rocket-svg.svg" alt="">
+            <img src="bkash-svg.svg" alt="">
+            <img src="mycash-svg.svg" alt="">
+            <img src="unionapy-svg.svg" alt="">
+            <img src="surecash-svg.svg" alt="">
+            <img src="unionapy-svg.svg" alt="">
+            <img src="tap-svg.svg" alt="">
+          </div>
+        </div>
+        <div class="flex mt-10 justify-around">
+          <div>
+            <h3 class="text-3xl font-semibold">Banking + Others <span class="font-bold">--></span> </h1>
+          </div>
+          <div class="flex gap-6">
+            <img src="WhatsApp Image 2024-01-28 at 23.43.42_9ad03ac0.jpg" alt="">
+            <img src="WhatsApp Image 2024-01-28 at 23.43.43_e295c5ba.jpg" alt="">
+            <img src="WhatsApp Image 2024-01-28 at 23.43.43_c93636db.jpg" alt="">
+            <img src="visa-svg.svg" alt="">
+            <img src="tappay-svg.svg" alt="">
+            <img src="verified-by-visa.svg" alt="">
+          </div>
+        </div>
+      </div>
     </section>
   </main>
-  <footer class="footer p-10 bg-gray-900 text-stone-50 mt-10">
+  <footer class="footer p-10 bg-blue-500 text-stone-50 mt-10">
     <aside class="mx-auto text-center">
-      <p class="text-stone-50 text-3xl mx-auto lg:mx-0">Get In Touch</p>
+      <p class="text-black text-3xl mx-auto lg:mx-0">Get In Touch</p>
       <p class="text-stone-50 text-xs mb-2">Connect with us and let's make things happen. Get in touch <br>for
         inquiries, collaboration, or to explore how we can assist <br>you.</p>
       <div class="flex gap-2 mx-auto lg:mx-0">
@@ -329,7 +373,7 @@
     </aside>
     <div class="flex mx-auto gap-8">
       <div class="flex flex-col">
-        <header class="footer-title">Services</header>
+        <header class="footer-title text-black">Services</header>
         <a href="https://www.grameenphone.com/" class="link link-hover mb-2">GP</a>
         <a href="https://robi.com.bd/en" class="link link-hover mb-2">Robi</a>
         <a href="https://www.banglalink.net/en" class="link link-hover mb-2">BanglaLink</a>
@@ -337,7 +381,7 @@
         <a href="https://www.bd.airtel.com/en" class="link link-hover mb-2">Airtel</a>
       </div>
       <div class="flex flex-col">
-        <header class="footer-title">Support</header>
+        <header class="footer-title text-black">Support</header>
         <a class="link link-hover mb-2">Help Center</a>
         <a class="link link-hover mb-2">FAQ</a>
         <a class="link link-hover mb-2">Operators</a>
@@ -345,7 +389,7 @@
       </div>
     </div>
     <div class="flex flex-col">
-      <header class="footer-title">Company</header>
+      <header class="footer-title text-black">Company</header>
       <a class="link link-hover mb-2">About us</a>
       <a class="link link-hover mb-2">Leadership</a>
       <a class="link link-hover mb-2">Carrers</a>
@@ -353,6 +397,7 @@
       <a class="link link-hover mb-2">Legal Notice</a>
     </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 
 </html>
